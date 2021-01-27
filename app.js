@@ -4,6 +4,8 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 
+const db = require("./models/collectionsdb");
+
 const indexRouter = require("./routes/index");
 
 const app = express();
@@ -36,4 +38,4 @@ app.use(function (err, req, res, next) {
 	res.render("error");
 });
 
-module.exports = app;
+module.exports = app;  
