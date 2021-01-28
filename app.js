@@ -4,6 +4,19 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 
+const mongoose = require("mongoose");
+require('./models/schema');
+mongoose.connect("mongodb://localhost:27017/Instaclone", {
+	useNewUrlParser: true,
+	useUnifiedTopology: true
+});
+mongoose.connection.on('connected', () => {
+	console.log('connected')
+});
+mongoose.connection.on('error', (error) => {
+	console.log('error connection', error)
+});
+
 const indexRouter = require("./routes/index");
 
 const app = express();
