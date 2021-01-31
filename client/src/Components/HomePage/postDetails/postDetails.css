@@ -1,46 +1,121 @@
-.App{
-    text-align:center;
+  .page{
+    text-emphasis: none;
+    height: 20%
+  }
+  
+  .App{
     border: 2px solid gray;
     display: inline-block;
-    width: 70%;
-    height: 50%;
-    margin: 10px;
-    padding: 0px;
+    margin: 30% 70% 30% 70%;
+    width: 50%; 
+    height: 1%;
+    padding: 0 0 0 0;
     border-radius: 2%;
+    background: white;  
+  }  
+  .head_section{
+    vertical-align: center;
+    width: 100%; 
+    display: inline-block;
+    width: 100%;
   }
   .name{
     text-align: left;
-    padding: 0 0 0 10px;
+    font: normal normal bold 28px/34px Helvetica;
+    padding: 0 0 0 5%;
+    opacity: 1;
   }
-  /* .icon{
-    vertical-align:right;
-    horizontal-align:right;
-    width: 20px;
-    height:10px;
-  } */
+  .more_icon_class{
+    /* vertical-align: center; */
+    display: inline-block;
+    width: 100%; 
+    height:100%;
+    text-align:right;
+    /* padding: 0 5% 0 0; */
+    /* margin-right: 5%; */
+    /* margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); */
+  }
+  .more_icon{
+    /* vertical-align:center; */
+    text-align:right;
+    padding: 0 0 0 0;
+    margin-right: 5%;
+    /* width : 5%; */
+    /* border: 1px solid #707070; */
+    /* background: #000000 0% 0% no-repeat padding-box; */
+    opacity: 1;
+  }  
   .place{
     text-align: left;
-    padding: 0 0 0 10px;
-    color: gray;
+    padding: 0 0 0 5%;
+    color: #707070;
+    font: normal normal normal 24px/29px Verdana;
+    opacity: 1;
   }
   .avatar {
-    vertical-align: middle;
-    horizontal-align: middle;
+    vertical-align: center;
+    width: 100%; 
+    height: 20%;
+    padding: 0 0 0 0;
+  }
+  .likes_share_date{
+    vertical-align: center;
+    display:inline-block;
     width: 100%;
-    height: 250px;
-    padding: 0 10px 0 -10px;
+  }
+  .likes_share{
+    padding:0 0 0 0;
+    width: 50%;
+    display: inline-block;
+    text-align: left;
+  }
+  .likes_icon{
+    vertical-align: left;
+    text-align: left;
+    padding: 0 0 0 0;
+    width: 10%;
+    height: 25px; 
+    background: transparent 0% 0% no-repeat padding-box;
+    opacity: 1;  
+  }
+  .share_icon{
+    vertical-align: left;
+    padding: 0 0 0 0;
+    background: transparent 0% 0% no-repeat padding-box;
+    opacity: 1;
   }
   .date{
     text-align: right;
-    padding: 0 10px;
+    padding: 0 0 0 0;
+    width: 50%;
+    display: inline-block;
+    /* text-align: left; */
+    font: normal normal normal 20px/24px Verdana;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
   }
   .likes{
     text-align: left;
-    padding: 0 0 0 10px;
-    color: gray;
+    padding: 0 0 0 5%;
+    font: normal normal normal 20px/24px Verdana;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
   }
   .description{
     text-align: left;
-    padding: 0 0 0 10px;
+    padding: 0 0 0 5%;
+    font: normal normal bold 28px/34px Helvetica;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
   }
-  
+
+
+
+
