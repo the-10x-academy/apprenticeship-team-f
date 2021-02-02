@@ -4,6 +4,7 @@
   }
   
   .App{
+    font-size: 0;
     border: 2px solid gray;
     display: inline-block;
     margin: 30% 70% 30% 70%;
@@ -68,6 +69,7 @@
     width: 100%;
   }
   .likes_share{
+    margin-left: 0%;
     padding:0 0 0 0;
     width: 50%;
     display: inline-block;
@@ -93,7 +95,7 @@
     padding: 0 0 0 0;
     width: 50%;
     display: inline-block;
-    /* text-align: left; */
+    margin-right: 0%;
     font: normal normal normal 20px/24px Verdana;
     letter-spacing: 0px;
     color: #000000;
