@@ -70,21 +70,26 @@
 }
 .likes_share_date {
 	vertical-align: center;
-	display: inline-block;
+	display: flex;
 	width: 100%;
 }
 .likes_share {
-	padding: 0 0 0 0;
+	margin-left: 2%;
+	margin-top: 3%;
 	width: 50%;
 	display: inline-block;
 	text-align: left;
 }
+.date {
+	margin-right: 5%;
+}
 .likes_icon {
 	vertical-align: left;
 	text-align: left;
-	padding: 0 0 0 0;
-	width: 10%;
-	height: 25px;
+	margin-right: 7%;
+	margin-left: 5%;
+	width: 32px;
+	height: 32px;
 	background: transparent 0% 0% no-repeat padding-box;
 	opacity: 1;
 }
