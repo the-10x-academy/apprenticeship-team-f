@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
   .page{
     text-emphasis: none;
     height: 20%
@@ -37,6 +38,8 @@
     /* margin-right: 5%; */
     /* margin: 0;
 =======
+=======
+>>>>>>> 5d894b4a772327687807bd339f03f62c09caf25d
 .page {
 	text-emphasis: none;
 	height: 20%;
@@ -79,11 +82,15 @@
 	/* padding: 0 5% 0 0; */
 	/* margin-right: 5%; */
 	/* margin: 0;
+<<<<<<< HEAD
 >>>>>>> 2e756513e1ceca21723a2cba50217f32bf31fc7d
+=======
+>>>>>>> 5d894b4a772327687807bd339f03f62c09caf25d
     position: absolute;
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%); */
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   .more_icon{
@@ -168,6 +175,8 @@
 
 
 =======
+=======
+>>>>>>> 5d894b4a772327687807bd339f03f62c09caf25d
 }
 .more_icon {
 	/* vertical-align:center; */
@@ -194,21 +203,43 @@
 }
 .likes_share_date {
 	vertical-align: center;
+<<<<<<< HEAD
 	display: inline-block;
 	width: 100%;
 }
 .likes_share {
 	padding: 0 0 0 0;
+=======
+	display: flex;
+	width: 100%;
+}
+.likes_share {
+	margin-left: 2%;
+	margin-top: 3%;
+>>>>>>> 5d894b4a772327687807bd339f03f62c09caf25d
 	width: 50%;
 	display: inline-block;
 	text-align: left;
 }
+<<<<<<< HEAD
 .likes_icon {
 	vertical-align: left;
 	text-align: left;
 	padding: 0 0 0 0;
 	width: 10%;
 	height: 25px;
+=======
+.date {
+	margin-right: 5%;
+}
+.likes_icon {
+	vertical-align: left;
+	text-align: left;
+	margin-right: 7%;
+	margin-left: 5%;
+	width: 32px;
+	height: 32px;
+>>>>>>> 5d894b4a772327687807bd339f03f62c09caf25d
 	background: transparent 0% 0% no-repeat padding-box;
 	opacity: 1;
 }
@@ -245,4 +276,7 @@
 	color: #000000;
 	opacity: 1;
 }
+<<<<<<< HEAD
 >>>>>>> 2e756513e1ceca21723a2cba50217f32bf31fc7d
+=======
+>>>>>>> 5d894b4a772327687807bd339f03f62c09caf25d
