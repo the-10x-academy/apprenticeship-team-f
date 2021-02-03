@@ -1,35 +1,14 @@
 const express = require("express");
 const router = express.Router();
-const mongoose = require("mongoose"); // new included
-const mongo = require("../mongo"); // new included
-const Post = require("../Models/login"); // new included schema
+const mongoose = require("mongoose"); 
+const mongo = require("../mongo"); 
+const Post = require("../Models/post"); 
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
 	res.render("index", { title: "Express" });
 });
 
-// Implement a function to read list of posts from the db---> starting
-
-// router.get("/login", async (req, res) => {
-// 	// requests
-// 	const post = new Post({
-// 		// schema calling
-// 		userName: "Akash_hello",
-// 		password: "hello_123",
-// 		statusFlag: "Active",
-// 	});
-// 	post.save((err, doc) => {
-// 		//
-// 		if (err) console.log(err);
-// 		console.log(doc);
-// 	});
-// 	console.log(post); /// additional
-// 	const posts = await login.find({});
-// 	res.send(posts); // render fn
-// });
-
-// Implement a function to read list of posts from the db---> ending
 
 router.get("/posts", function (req, res) {
 	Post.find()
@@ -48,17 +27,17 @@ router.get("/posts", function (req, res) {
 router.post("/posts", (req, res) => {
 	console.log(req.body);
 	var ale = {
-		given_name: req.body.username, //// to compare with schema
+		given_name: req.body.username,
 		given_location: req.body.location,
-		given_comment: req.body.comment, ////newly added
-		given_likes: req.body.likes, ////newly added
+		given_comment: req.body.comment, 
+		given_likes: req.body.likes, 
 	};
 	console.log(ale, req.body);
 	const author = new Post({
-		username: ale.given_name, /// to assaign the valid input
+		username: ale.given_name, 
 		location: ale.given_location,
-		comment: ale.given_comment, ////newly added
-		likes: ale.given_likes, ///newly added
+		comment: ale.given_comment, 
+		likes: ale.given_likes, 
 	});
 	author.save((err, doc) => {
 		if (err) console.log(err);
