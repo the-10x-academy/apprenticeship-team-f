@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    top: 0px;
+    left: 0px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.header {
+    background-color: white;
+    padding: 15px;
+    border-bottom: 1.3px solid lightgrey;
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+}
+
+.Iicon {
+    top: 25px;
+    left: 200px;
+    width: 64px;
+    height: 64px;
+    margin-left: 200px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+    opacity: 1;
+}
+
+.line {
+    color:#006238;
+    top: 25px;
+    left: 274px;
+    width: 289px;
+    height: 71px;
+    text-align: left;
+    font: normal normal normal 64px/71px Palatino;
+    letter-spacing: 0px;
+    color: #006238;
+    opacity: 1;
+}
+
+.Icamera {
+    top: 40px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    margin-left: 1080px;
+    width: 48px;
+    height: 48px;
+    opacity: 1;
+}

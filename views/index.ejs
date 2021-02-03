@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 	<head>
 		<title><%= title %></title>
@@ -8,4 +8,35 @@
 		<h1><%= title %></h1>
 		<p>Welcome to <%= title %></p>
 	</body>
+</html> -->
+
+<!-- newly added fn to db  
+styling to take the input 
+method, posts enroutes them to routes(index.js) and check it with schema(login.js)-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div>
+			<form method="POST" action="/posts">
+				<label for="username">username</label>
+				<input type="text" id="username" name="username" />
+				<label for="location">Location</label>
+				<input type="text" id="location" name="location" />
+				<label for="comment">comment</label>
+				<input type="text" id="comment" name="comment" />
+				<label for="likes">like</label>
+				<input type="number" id="likes" name="likes" />
+
+				<button type="submit">Add</button>
+			</form>
+		</div>
+	</body>
 </html>
+
+<!-- newly added fn to db  -->
