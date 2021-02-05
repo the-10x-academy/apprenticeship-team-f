@@ -8,7 +8,7 @@ import PostList from "./Components/HomePage/PostList";
 
 ReactDOM.render(
 	<React.StrictMode>
-		<PostList/>
+		<App/>
 	</React.StrictMode>,
 	document.getElementById("root"),
 );
