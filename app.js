@@ -12,6 +12,8 @@ const app = express();
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
+app.use('/uploads',express.static(path.join(__dirname, "/uploads")));
+
 app.use(cors());
 
 app.use(logger("dev"));

@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const url = "mongodb://127.0.0.1:27017/Instaclone"; // local host database name
+const url = "mongodb://127.0.0.1:27017/instaclone"; // local host database name
 
 mongoose.connect(url, { useNewUrlParser: true });
 
