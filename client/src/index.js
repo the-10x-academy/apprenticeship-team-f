@@ -1,13 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-//import App from "./Components/HomePage/HomePage";
-import App from "./App";
+import App from "./Components/HomePage/HomePage";
 import reportWebVitals from "./reportWebVitals";
+import Header from "./header";
+import PostList from "./Components/HomePage/PostList";
 
 ReactDOM.render(
 	<React.StrictMode>
-		<App />
+		<App/>
 	</React.StrictMode>,
 	document.getElementById("root"),
 );
