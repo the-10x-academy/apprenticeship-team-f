@@ -24,7 +24,7 @@ class PostList extends React.Component{
     if(this.state.post)
     {
         pl = this.state.post.map((item)=>{
-            return <Post username={item.username} location={item.location} comment={item.comment} ></Post> 
+            return <Post name={item.username} location={item.location} description={item.comment} image={item.image} date={item.date} likes={items.likes}></Post> 
         })
     
      }
