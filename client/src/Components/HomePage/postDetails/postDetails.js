@@ -4,8 +4,9 @@ import more_icon from "./icons/more_icon.svg";
 import likes_icon from "./icons/heart.png";
 import share_icon from "./icons/share.png";
 
-
 export default function postDetails(props) {
+  // const imagePath = "./../../../../../" + props.image ;
+
   return (
     <div className="App">
       <div className="headSection">
@@ -27,7 +28,7 @@ export default function postDetails(props) {
       <div className="midSection">  
 
        
-        <img className="avatar"         alt=""               src={props.image} />
+        <img className="avatar"         alt=""               src={`http://localhost:9000/${props.image}`}/>
     
 
       </div> 
