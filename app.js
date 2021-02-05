@@ -4,26 +4,15 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 
-const mongoose = require("mongoose");
-require('./models/schema');
-mongoose.connect("mongodb://localhost:27017/Instaclone", {
-	useNewUrlParser: true,
-	useUnifiedTopology: true
-});
-mongoose.connection.on('connected', () => {
-	console.log('connected')
-});
-mongoose.connection.on('error', (error) => {
-	console.log('error connection', error)
-});
-
 const indexRouter = require("./routes/index");
-
+const cors = require("cors");
 const app = express();
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
+
+app.use(cors());
 
 app.use(logger("dev"));
 app.use(express.json());
@@ -32,6 +21,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
+
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
