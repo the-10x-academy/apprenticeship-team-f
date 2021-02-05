@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
+.HomePage {
+	display: flex;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	padding-left: 5%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Left section */
+.leftSection {
+	width: 50%;
+	text-align: right;
+}
+/* Left section (image)*/
+.homePage-img {
+	height: 95vh;
+	width: 30vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Right section */
+
+.rightSection {
+	width: 50%;
+	display: table;
+	text-align: left;
+}
+/* Right section(heading & button section ) */
+.rightSectionContent {
+	height: 95vh;
+	width: 33.33vw;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: left;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.teamHeading {
+	color: #006238;
+	margin-bottom: 15px;
+	font: normal normal normal 64px/71px Palatino;
+	margin-left: 90px;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.enter-btn {
+	color: #006238;
+	font: normal normal normal 25px/20px Verdana;
+	/* font-weight: bold; */
+	border-radius: 8px;
+	border: 3px solid #006238;
+	background-color: white;
+	width: 128px;
+	height: 64px;
+	display: inline;
+	margin-left: 165px;
 }
