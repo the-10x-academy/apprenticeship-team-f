@@ -38,8 +38,8 @@ class PostList extends React.Component{
 
       <div>
           <ul>
-            {pl}
-        </ul>
+            {pl}  
+          </ul>
       </div>
 
     </div>
