@@ -17,21 +17,20 @@ const postSchema = new mongoose.Schema({
 
 	image: {
 		type: String,
-		required: true,
+		required: false,
 	},
-	
 
 	likes: {
-		
 		type: Number,
 		required: true,
 	},
-	
+
 	Date: {
 		type: Date,
 		default: Date.now,
 	},
 });
+
 //collection creation
 // const Post = new mongoose.model("Post",postSchema);
 module.exports = mongoose.model("Post", postSchema);
