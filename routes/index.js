@@ -43,6 +43,7 @@ router.post("/posts", (req, res) => {
 		console.log(doc);
 	});
 	res.redirect("/posts");
+
 });
 
 module.exports = router;

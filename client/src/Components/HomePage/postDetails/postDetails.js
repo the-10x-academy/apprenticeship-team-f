@@ -46,7 +46,7 @@ export default function postDetails(props) {
         </div>
 
         <div>
-          <h6  className="likes">       {props.likes}        </h6>
+          <h6  className="likes">       {props.likes} likes        </h6>
         </div> 
 
         <div>

@@ -14,6 +14,7 @@
     justify-content: left;
     align-items: center;
     flex-direction: row;
+    /* margin-left:15%;  */
 }
 
 .Iicon {
@@ -52,3 +53,5 @@
     height: 48px;
     opacity: 1;
 }
+
+
