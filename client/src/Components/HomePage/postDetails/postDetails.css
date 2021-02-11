@@ -1,153 +1,106 @@
+.Page{
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
 
-  .App{
-    /* position: relative; */
-    font-size: 0px;
-    border: 2px solid gray;
-    display: flex;
-    flex-direction: column;
-    margin: 10% 0 10% 10%;
-    width: 50%; 
-    padding: 0 0 0 0;
-    border-radius: 10px;
-    letter-spacing: 0px;
-  }  
+.App{
+	top: 200px;
+	left: 600px;
+	width: 800px;
+	height: 650px;
+	border: 2px solid lightgray;
+	border-radius: 5px;
+	opacity: 1;
+	background: white 0% 0% no-repeat padding-box;
+	margin-top: 80px;	
+}
 
-  .headSection{
-    display: flex;
-    flex-direction: row;
-    height:30%;
-    text-align: center;
-  }
+.headSection{
+ 	display: flex;
+	align-items: center;
+	padding: 0px 20px 0px 20px;  
+}
+.nameLocation{
+  flex: 1;
+}
+.nameLocation > h1{
+	font: normal normal bold 28px/34px Helvetica;
+	margin-top: 8px;
+  	margin-bottom: 0;
+	/* font-family: Helvetica; */
+}
+.nameLocation > h2{
+  	margin-top: 5px;
+	margin-bottom: 10px; 
+	font: normal normal normal 24px/29px Verdana;
+	color: #707070;
+	/* font-family: Verdana; */
+}
+.moreIcon{
+  	width: 20px;
+	height: 5px;
+}
+.avatar{
+	top: 300px;
+	left: 600px;
+	width: 800px;
+	height: 400px;
+	object-fit: contain;
+	border-top: 1px solid lightgray;
+	border-bottom: 1px solid lightgray;
+}
+.description{
+	top: 820px;
+	left: 632px;
+	width: 450px;
+	height: 28px;
+	text-align: left;
+	font: normal normal bold 25px/34px Helvetica;
+	letter-spacing: 0px;
+	color: #000000;
+	opacity: 1;
+	padding: 0px 20px 5px 20px;
+}
 
-  .nameLocation{
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    padding: 0 0 0 5%;
-  }
+.likesShareDate{
+	display: flex;
+	padding: 10px 20px 0px 20px;
+	opacity: 1;
+	font-size: small;
+}
+.likesShare{
+	flex: 1;
+}
+.likesIcon{
+	width: 30px;
+	height: 30px;
+	margin-right: 22px;
+}
+.shareIcon{
+	width: 30px;
+	height: 30px;
+}
+.likes{
+	top: 764px;
+	left: 632px;
+	width: 77px;
+	height: 24px;
+	padding: 15px 0px 15px 20px;
+	text-align: left;
+	font: normal normal normal 20px/24px Verdana;
+	letter-spacing: 0px;
+	color: #707070;
+	opacity: 1;
+}
 
-  .name {
-    text-align: left;
-    font: normal normal bold 28px/34px Helvetica;
-    padding: 0 0 0 5%;
-    opacity: 1;
-    margin: 0 0 0 0;
-  }
 
-  .location{
-    text-align: left;
-    padding: 0 0 0 5%;
-    color: #707070;
-    font: normal normal normal 24px/29px Verdana;
-    opacity: 1;
-    margin: 0 0 0 0;
-  }  
-   
-  .moreIconClass{
-    display:flex;
-    flex-direction: row;
-    text-align: center;
-    align-items: center;
-    justify-content: center; 
-    width: 40%;
-    /* max-width: 100%; */
-    padding: 0 0 0 0;
-    margin: 0 3% 0 65%;
-  } 
-
-  .moreIcon{
-    margin-right: 5%;
-    max-width:50%;
-    height: auto;
-    align-items: left;
-    text-align: left; 
-    /* justify-content: center; */
-  }
-
-  .midsection{
-    height: auto;
-  }
-
-  .avatar{
-    /* position: relative; */
-    width: 100%;
-    height: auto;
-    background: transparent 0% 0% no-repeat padding-box;
-  }
-
-  .footSection{
-    height: 30%;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .likesShareDate{
-    align-items: left;
-    display: flex;
-    flex-direction: row;
-    font-size: 0px;
-    width: 100%;
-  }
-
-  .likesShare{
-    align-items: left;
-    display: flex;
-    flex-direction: row;
-    width:50%;
-    padding: 0 0 0 2%;
-    margin-left: 2.5%;
-  }
-
-  .likesIcon{
-    text-align: left;
-    padding: 0 0 0 5%;
-    width: auto;
-    max-width: 100%;
-    height: auto; 
-    opacity: 1;  
-    color: black;
-  }
-
-  .shareIcon{
-    width: auto;
-    padding: 0 0 0 5%;
-    background: transparent 0% 0% no-repeat padding-box;
-    opacity: 1;
-  }
-
-  .date{
-    text-align: left;
-    padding: 0 0 0 0;
-    width: 50%;
-    display: flex;
-    margin-left: 80%;
-    font: normal normal normal 20px/24px Verdana;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 1;
-    margin: 0 0 0 60%;
-  }
-
-  .likes{
-    text-align: left;
-    padding: 0 0 0 5%;
-    font: normal normal normal 20px/24px Verdana;
-    letter-spacing: 0px;
-    color: #707070;
-    opacity: 1;
-    margin: 0 0 0 0;
-  }
-
-  .description{
-    text-align: left;
-    padding: 0 0 0 5%;
-    font: normal normal bold 28px/34px Helvetica;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 1;
-    margin: 0 0 0 0;
-  }
-
-  
-
+.date{
+	text-align: left;
+	font: normal normal normal 20px/24px Verdana;
+	letter-spacing: 0px;
+	color: #000000;
+	opacity: 1;
+}

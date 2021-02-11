@@ -17,9 +17,10 @@ router.get("/", function (req, res, next) {
 /*edited*/
 var storage = multer.diskStorage({
 	destination: function (req, file, cb) {
-		cb(null, "public/uploads");
+		cb(null, "./uploads");
 	},
 	filename: function (req, file, cb) {
+		console.log(file);
 		cb(null, file.fieldname + "_" + Date.now() + ".jpg");
 	},
 });
@@ -41,17 +42,17 @@ router.get("/posts", function (req, res) {
 });
 
 router.post("/posts", upload.single("image"), (req, res, next) => {
-	const fileinfo = req.file.filename;
-	res.send(fileinfo);
-	const imagePath = req.file.path.replace("public", "");
+	// const fileinfo = req.file.filename;
+	// res.send(fileinfo);
+	const imagePath = req.file.path;
 
-	console.log(req.body);
+	console.log(req);
 	var ale = {
 		given_name: req.body.username, //// to compare with schema
 		given_location: req.body.location,
 		given_comment: req.body.comment, ////newly added
 		given_likes: req.body.likes, ////newly added
-		given_image: imagepath,
+		given_image: imagePath,
 	};
 	console.log(ale, req.body);
 	const author = new Post({
@@ -59,7 +60,7 @@ router.post("/posts", upload.single("image"), (req, res, next) => {
 		location: ale.given_location,
 		comment: ale.given_comment, ////newly added
 		likes: ale.given_likes, ///newly added
-		image: ale.given_images,
+		image: ale.given_image,
 	});
 	author.save((err, doc) => {
 		if (err) console.log(err);

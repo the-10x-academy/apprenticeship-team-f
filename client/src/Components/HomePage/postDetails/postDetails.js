@@ -5,59 +5,44 @@ import likes_icon from "./icons/heart.png";
 import share_icon from "./icons/share.png";
 
 export default function postDetails(props) {
-  // const imagePath = "./../../../../../" + props.image ;
+	// const imagePath = "./../../../../../" + props.image ;
 
-  return (
-    <div className="App">
-      <div className="headSection">
+	return (
+		<div className="Page">
+			<div className="App">
+				<div className="headSection">
+					<div className="nameLocation">
+						<h1 className="name"> {props.name} </h1>
+						<h2 className="location"> {props.location} </h2>
+					</div>
 
+					<img className="moreIcon" alt="" src={more_icon} />
+				</div>
 
-        <div className="nameLocation">
-          <h1  className="name">        {props.name}  			 </h1>
-          <h2  className="location">    {props.location}     </h2>
-        </div>
+				<img
+					className="avatar"
+					alt=""
+					src={`http://localhost:9000/${props.image}`}
+				/>
 
-        <div className="moreIconClass">
-          <img className="moreIcon"     alt=""               src={more_icon} /> 
-        </div>  
+				<div className="footSection">
+					<div className="likesShareDate">
+						<div className="likesShare">
+							<img className="likesIcon" alt="" src={likes_icon} />
+							<img className="shareIcon" alt="" src={share_icon} />
+						</div>
+						<h6 className="date"> {props.date} </h6>
+					</div>
 
+					<div>
+						<h6 className="likes"> {props.likes}likes </h6>
+					</div>
 
-      </div>  
-
-
-      <div className="midSection">  
-
-       
-        <img className="avatar"         alt=""               src={`http://localhost:9000/${props.image}`}/>
-    
-
-      </div> 
-
-
-      <div className="footSection">
-      
-      
-        <div className="likesShareDate">
-          <div className="likesShare">
-            <img className="likesIcon"  alt=""               src={likes_icon} />
-            <img className="shareIcon"  alt=""               src={share_icon} />
-          </div>
-          <h6  className="date">        {props.date}         </h6>
-        </div>
-
-        <div>
-          <h6  className="likes">       {props.likes}        </h6>
-        </div> 
-
-        <div>
-          <h3  className="description"> {props.description}  </h3>
-        </div> 
-      
-      
-      </div>
-    </div>
-  );
+					<div>
+						<h3 className="description"> {props.description} </h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 }
-
-
-

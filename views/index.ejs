@@ -23,7 +23,7 @@ method, posts enroutes them to routes(index.js) and check it with schema(login.j
 	</head>
 	<body>
 		<div>
-			<form method="POST" action="/posts">
+			<form method="POST" action="/posts" enctype="multipart/form-data">
 				<label for="username">username</label>
 				<input type="text" id="username" name="username" />
 				<label for="location">Location</label>
