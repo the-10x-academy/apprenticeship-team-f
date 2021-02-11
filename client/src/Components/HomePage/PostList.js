@@ -1,6 +1,7 @@
 import React from "react";
 import Post from "./postDetails/postDetails"
 import Header from "./../../header.jsx"
+
 class PostList extends React.Component{
   constructor(props){
     super(props)
@@ -33,10 +34,11 @@ class PostList extends React.Component{
     <div>
          
       <div>
+
         <Header/>
       </div> 
 
-      <div>
+      <div> 
           <ul>
             {pl}
         </ul>
