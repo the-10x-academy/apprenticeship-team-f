@@ -8,36 +8,26 @@ export default function postDetails(props) {
   // const imagePath = "./../../../../../" + props.image ;
 
   return (
+    <div className="Total">
     <div className="App">
       <div className="headSection">
-
-
         <div className="nameLocation">
           <h1  className="name">        {props.name}  			 </h1>
           <h2  className="location">    {props.location}     </h2>
         </div>
 
-        <div className="moreIconClass">
-          <img className="moreIcon"     alt=""               src={more_icon} /> 
-        </div>  
-
-
+       
+        <img className="moreIcon"     alt=""               src={more_icon} /> 
+    
       </div>  
 
 
-      <div className="midSection">  
-
-       
-        <img className="avatar"         alt=""               src={`http://localhost:9000/${props.image}`}/>
-    
-
-      </div> 
+              
+      <img className="avatar"         alt=""               src={`http://localhost:9000/${props.image}`}/>
 
 
-      <div className="footSection">
-      
-      
-        <div className="likesShareDate">
+      <div className="footSection">    
+          <div className="likesShareDate">
           <div className="likesShare">
             <img className="likesIcon"  alt=""               src={likes_icon} />
             <img className="shareIcon"  alt=""               src={share_icon} />
@@ -46,7 +36,8 @@ export default function postDetails(props) {
         </div>
 
         <div>
-          <h6  className="likes">       {props.likes}        </h6>
+          <h6  className="likes">       {props.likes}likes     </h6>
+          
         </div> 
 
         <div>
@@ -55,6 +46,7 @@ export default function postDetails(props) {
       
       
       </div>
+    </div>
     </div>
   );
 }
