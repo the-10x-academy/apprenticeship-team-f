@@ -8,7 +8,7 @@ export default function postDetails(props) {
   // const imagePath = "./../../../../../" + props.image ;
 
   return (
-    <div className="Total">
+    <div className="Page">
     <div className="App">
       <div className="headSection">
         <div className="nameLocation">
