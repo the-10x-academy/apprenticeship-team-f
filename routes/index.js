@@ -67,6 +67,7 @@ router.post("/posts", upload.single("image"), (req, res, next) => {
 		console.log(doc);
 	});
 	res.redirect("/posts");
+
 });
 
 module.exports = router;

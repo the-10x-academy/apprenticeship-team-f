@@ -9,16 +9,21 @@ import {
 
 import HomePage from "./Components/HomePage/HomePage";
 import PostList from "./Components/HomePage/PostList.js";
+import FileUpload from "./Components/HomePage/FileUpload/FileUpload.js";
 
 function App() {
-	return (
-		<Router>
-			<switch>
-				<Route exact path="/" component={HomePage} />
-				<Route exact path="/insta" component={PostList} />
-			</switch>
-		</Router>
-	);
+
+    return (
+            <Router>
+                <switch>
+                    <Route exact path="/" component={HomePage} />
+                    <Route exact path="/insta" component={PostList} />
+                    <Route exact path="/instaUpload" component={FileUpload} />
+                </switch>
+                
+            </Router>
+    );
+
 }
 
 export default App;
