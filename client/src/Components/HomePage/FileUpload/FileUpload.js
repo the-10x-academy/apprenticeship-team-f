@@ -7,10 +7,10 @@ function FileUpload() {
 
   const [file, setFile] = useState(
     {
+      image:"",
       username:"",
       location:"",
       comment:"",
-      image:"",
       likes:0
     }
   );
@@ -18,12 +18,15 @@ function FileUpload() {
   function eventChange(event) {
     const {name, value} = event.target;  
     setFile(prevInput => {
+      console.log("file resetting")
+      console.log(file)
       return(
         {
           ...prevInput,
           [name]:value
         })
     });
+    console.log("file reset")
   }
 
   // const el = useRef(); // accesing input element
@@ -58,17 +61,18 @@ function FileUpload() {
 
   // const [fileupload, setfileupload] = useState(false);
 
-  // var isFilled = false;
-
-  // if (file.comment !== "") {
-  //   isFilled = true;
-  // } 
+  var isFilled = false;
 
   var post_state = "post_inert";
 
-  // if (isFilled) {
-  //   post_state = "post_active";
-  // }  
+  if ((file.comment !== "" && file.comment !== "undefined") && (file.image !== "" && file.image !== "undefined") && (file.location !== "" && file.location !== "undefined") && (file.username !== "" && file.username !== "undefined")) {
+    console.log(file.username, file.image, file.location, file.comment)
+    isFilled = true;
+  } 
+
+  if (isFilled) {
+    post_state = "post_active";
+  }  
 
   return (
 
@@ -81,16 +85,18 @@ function FileUpload() {
           <input
             id="Upload" 
             type="file" 
-            multiple="multiple" 
-            value={file.image}
+            // multiple="multiple" 
+            value={file.name}
             name="image" 
             accept="image/*" 
             onChange={event => {
-              console.log('picture selected',event)
-              const image = event.target.files[0];
-              setFile(image);
-            }}>
-          </input>  
+              console.log('picture selected')
+              const file = event.target.files[0];
+              console.log(file)
+              // setFile(file)  
+            // onChange={eventChange}   
+            }}
+          ></input>  
 
           <label
             class="custom-file-input" 
@@ -103,6 +109,7 @@ function FileUpload() {
         <div className="second_div">
 
           <input
+            name="username"
             onChange={eventChange}
             value={file.username}
             className="author"
@@ -112,6 +119,7 @@ function FileUpload() {
 
 
           <input
+            name="location"
             onChange={eventChange}
             value={file.location}
             className="loc"
@@ -124,6 +132,7 @@ function FileUpload() {
         <div className="third_div">
 
           <input
+            name="comment"
             onChange={eventChange}
             value={file.comment}
             className="des"
