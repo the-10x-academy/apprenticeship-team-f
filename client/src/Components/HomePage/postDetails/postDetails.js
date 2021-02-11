@@ -36,12 +36,8 @@ export default function postDetails(props) {
         </div>
 
         <div>
-<<<<<<< HEAD
-          <h6  className="likes">       {props.likes} likes        </h6>
-=======
           <h6  className="likes">       {props.likes}likes     </h6>
           
->>>>>>> 8f167fd587216f946952a02fadd80baca9ad5220
         </div> 
 
         <div>
