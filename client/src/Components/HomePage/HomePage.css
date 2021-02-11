@@ -1,48 +1,60 @@
 .HomePage {
-  display: flex;
-  padding-top: 80px;
-  padding-bottom: 80px;
-  padding-left: 5%;
+	display: grid;
+	place-items: center;
+	background-color: #ffffff;
+	height: 100vh;
 }
 /* Left section */
 .leftSection {
-  width: 50%;
-  text-align: right;
+	display: flex;
+	background-color: #ffffff;
+	height: 90vh;
+	width: 60vw;
 }
 /* Left section (image)*/
 .homePage-img {
-  height: 95vh;
-  width: 30vw;
+	flex: 0.5;
+	display: flex;
 }
 /* Right section */
 .rightSection {
-  width: 50%;
-  display: table;
-  text-align: left;
+	flex: 0.5;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	padding: 30vh 0vh 0vh 10vh;
 }
 /* Right section(heading & button section ) */
 .rightSectionContent {
-  height: 95vh;
-  width: 33.33vw;
-  display: table-cell;
-  vertical-align: middle;
-  text-align: left;
+	height: 95vh;
+	width: 33.33vw;
+	display: flex;
+	vertical-align: middle;
+	text-align: left;
 }
+
 .teamHeading {
-  color: #006238;
-  margin-bottom: 15px;
-  font: normal normal normal 64px/71px Palatino;
-  margin-left: 90px;
+	font: normal normal normal 8vh/12vh Palatino;
+	letter-spacing: 0px;
+	color: #006238;
+	opacity: 1;
+	margin-bottom: 2vh;
 }
 .enter-btn {
-  color: #006238;
-  font: normal normal normal 25px/20px Verdana;
-  /* font-weight: bold; */
-  border-radius: 8px;
-  border: 3px solid #006238;
-  background-color: white;
-  width: 128px;
-  height: 64px;
-  display: inline;
-  margin-left: 165px;
+	background: #ffffff;
+	border: 0.5vh solid #006238;
+	border-radius: 1.5vh;
+	text-align: center;
+	display: flex;
+	width: 17vh;
+	height: 7vh;
+	padding: 0vh 2vh 2vh 1vh;
+	font: normal normal normal 5vh/6vh Verdana;
+	letter-spacing: 0px;
+	color: #006238;
+	opacity: 1;
+}
+
+.enter-btn:hover {
+	cursor: pointer;
 }
