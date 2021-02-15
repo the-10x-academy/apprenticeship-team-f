@@ -3,9 +3,8 @@ import axios from "axios";
 import "./FileUpload.css";
 import Header from "../../../header";
 
-const uploadFile = (file) => {
-	// e.preventDefault();
-	console.log("file ", file);
+const uploadFile = (e, file) => {
+	e.preventDefault();
 	// setfileupload(true);
 	var formData = new FormData();
 	formData.append("image", file.image);
@@ -13,7 +12,7 @@ const uploadFile = (file) => {
 	formData.append("location", file.location);
 	formData.append("comment", file.comment);
 	formData.append("likes", file.likes);
-	console.log("formData", formData); 
+	console.log("formData", formData);
 
 	axios({
 		method: "post",
@@ -40,19 +39,25 @@ function FileUpload() {
 		likes: 0,
 	});
 
-	function eventChange(event) {
+	const eventChange = (event) => {
 		const { name, value } = event.target;
-		console.log("event ", event);
 		setFile((prevInput) => {
-			console.log("prevInput", prevInput);
-			console.log(file);
 			return {
 				...prevInput,
 				[name]: value,
 			};
 		});
-		console.log("file reset");
-	}
+	};
+
+	const fileChangeEvent = (event) => {
+		const file = event.target.files[0];
+		setFile((prevInput) => {
+			return {
+				...prevInput,
+				image: file,
+			};
+		});
+	};
 
 	// const el = useRef(); // accesing input element
 
@@ -91,21 +96,7 @@ function FileUpload() {
 						value={file.name}
 						name="image"
 						accept="image/*"
-						onChange={(event) => {
-							console.log("picture selected");
-							const file = event.target.files[0];
-							console.log(file);
-							setFile((prevInput) => {
-								console.log("prevInput", prevInput);
-								console.log(file);
-								return {
-									...prevInput,
-									image: file,
-								};
-							});
-							// setFile(file);
-							// onChange={eventChange}
-						}}
+						onChange={() => fileChangeEvent}
 					></input>
 
 					<label class="custom-file-input" for="Upload" />
@@ -114,7 +105,7 @@ function FileUpload() {
 				<div className="second_div">
 					<input
 						name="username"
-						onChange={eventChange}
+						onChange={(event) => eventChange(event)}
 						value={file.username}
 						className="author"
 						type="text"
@@ -123,7 +114,7 @@ function FileUpload() {
 
 					<input
 						name="location"
-						onChange={eventChange}
+						onChange={(event) => eventChange(event)}
 						value={file.location}
 						className="loc"
 						type="text"
@@ -134,7 +125,7 @@ function FileUpload() {
 				<div className="third_div">
 					<input
 						name="comment"
-						onChange={eventChange}
+						onChange={(event) => eventChange(event)}
 						value={file.comment}
 						className="des"
 						type="text"
@@ -142,7 +133,10 @@ function FileUpload() {
 					/>
 				</div>
 
-				<button className={postState} onClick={uploadFile(file)}>
+				<button
+					className={postState}
+					onClick={(event) => uploadFile(event, file)}
+				>
 					{" "}
 					Post
 				</button>
