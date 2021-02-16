@@ -1,58 +1,57 @@
-.Page{
-	
+.Page {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
 
-.App{
+.App {
 	top: 200px;
 	left: 600px;
 	width: 800px;
 	height: 650px;
 	border: 2px solid lightgray;
-	border-radius: 5px;
+	border-radius: 7px;
 	opacity: 1;
 	background: white 0% 0% no-repeat padding-box;
-	margin-top: 80px;	
+	margin-top: 80px;
 }
 
-.headSection{
- 	display: flex;
+.headSection {
+	display: flex;
 	align-items: center;
-	padding: 0px 20px 0px 20px;  
+	padding: 0px 20px 0px 20px;
 }
-.nameLocation{
-  flex: 1;
+.nameLocation {
+	flex: 1;
 }
-.nameLocation > h1{
+.nameLocation > h1 {
 	font: normal normal bold 28px/34px Helvetica;
 	margin-top: 8px;
-  	margin-bottom: 0;
+	margin-bottom: 0;
 	/* font-family: Helvetica; */
 }
-.nameLocation > h2{
-  	margin-top: 5px;
-	margin-bottom: 10px; 
+.nameLocation > h2 {
+	margin-top: 5px;
+	margin-bottom: 10px;
 	font: normal normal normal 24px/29px Verdana;
 	color: #707070;
 	/* font-family: Verdana; */
 }
-.moreIcon{
-  	width: 20px;
+.moreIcon {
+	width: 20px;
 	height: 5px;
 }
-.avatar{
+.avatar {
 	top: 300px;
 	left: 600px;
 	width: 800px;
+	width: 100%;
 	height: 400px;
-	object-fit: contain;
 	border-top: 1px solid lightgray;
 	border-bottom: 1px solid lightgray;
 }
-.description{
+.description2 {
 	top: 820px;
 	left: 632px;
 	width: 450px;
@@ -65,28 +64,28 @@
 	padding: 0px 20px 5px 20px;
 }
 
-.likesShareDate{
+.likesShareDate {
 	display: flex;
 	padding: 10px 20px 0px 20px;
 	opacity: 1;
 	font-size: small;
 }
-.likesShare{
+.likesShare {
 	flex: 1;
 }
-.likesIcon{
+.likesIcon {
 	width: 30px;
 	height: 30px;
 	margin-right: 22px;
 }
-.shareIcon{
+.shareIcon {
 	width: 30px;
 	height: 30px;
 }
-.likes{
+.likes {
 	top: 764px;
 	left: 632px;
-	width: 77px;
+	width: 157px;
 	height: 24px;
 	padding: 15px 0px 15px 20px;
 	text-align: left;
@@ -96,8 +95,7 @@
 	opacity: 1;
 }
 
-
-.date{
+.date {
 	text-align: left;
 	font: normal normal normal 20px/24px Verdana;
 	letter-spacing: 0px;

@@ -28,31 +28,38 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage });
 
 router.get("/posts", function (req, res) {
-	Post.find()
-		.then((result) => {
-			res.status(200).json({
-				postData: result,
-			});
-			console.log(result);
-		})
-		.catch((err) => {
-			console.log(err);
-			res.status(500).json({ error: err });
-		});
+	console.log('requested')
+	Post.find({})
+  .sort({'_id':-1})
+  .exec(function(err,data){
+    if (err){
+      console.log(err)
+      res.json(500,{'message':'error'})
+	}
+	console.log(data,'found')
+    res.status(200).json(data);
+  })
 });
 
 router.post("/posts", upload.single("image"), (req, res, next) => {
 	// const fileinfo = req.file.filename;
 	// res.send(fileinfo);
+	console.log('hello')
 	const imagePath = req.file.path;
 
-	console.log(req);
+	let dateVar = new Date()
+	dateVar = date.toString()
+	dateVar = date.split(' ')
+	let currDate = dateVar[2]+' '+dateVar[1]+' '+dateVar[3]
+
+	console.log(req.url);
 	var ale = {
 		given_name: req.body.username, //// to compare with schema
 		given_location: req.body.location,
 		given_comment: req.body.comment, ////newly added
-		given_likes: req.body.likes, ////newly added
+		given_likes: 0, ////newly added
 		given_image: imagePath,
+		given_date: currDate
 	};
 	console.log(ale, req.body);
 	const author = new Post({
@@ -61,6 +68,7 @@ router.post("/posts", upload.single("image"), (req, res, next) => {
 		comment: ale.given_comment, ////newly added
 		likes: ale.given_likes, ///newly added
 		image: ale.given_image,
+		date: ale.given_date
 	});
 	author.save((err, doc) => {
 		if (err) console.log(err);
