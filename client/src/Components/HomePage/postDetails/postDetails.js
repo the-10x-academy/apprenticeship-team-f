@@ -32,7 +32,7 @@ export default function postDetails(props) {
 							<img className="likesIcon" alt="" src={likes_icon} />
 							<img className="shareIcon" alt="" src={share_icon} />
 						</div>
-						<h6 className="date"> {props.Date} </h6>  
+						<h6 className="date"> {props.date} </h6>  
 					</div>
 
 					<div>

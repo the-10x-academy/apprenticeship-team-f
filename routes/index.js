@@ -47,12 +47,12 @@ router.post("/posts", upload.single("image"), (req, res, next) => {
 	console.log('hello')
 	const imagePath = req.file.path;
 
-	let dateVar = new Date()
-	dateVar = date.toString()
-	dateVar = date.split(' ')
-	let currDate = dateVar[2]+' '+dateVar[1]+' '+dateVar[3]
+	let date = new Date()
+	date = date.toString()
+	date = date.split(' ')
+	let currDate = date[2]+' '+date[1]+' '+date[3]
 
-	console.log(req.url);
+	console.log("currDate is ", currDate);
 	var ale = {
 		given_name: req.body.username, //// to compare with schema
 		given_location: req.body.location,
