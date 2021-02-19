@@ -2,6 +2,7 @@ import React from "react";
 import Post from "./postDetails/postDetails"
 import Header from "./../../header.jsx"
 import Upload from '../HomePage/FileUpload/FileUpload'
+
 class PostList extends React.Component{
   constructor(props){
     super(props)
@@ -10,20 +11,20 @@ class PostList extends React.Component{
       upload:false
     }
   }
-  componentDidMount(){
-      fetch("http://localhost:9000/posts")
-      .then((res)=>{
-          
 
-          return res.json()
-       })
-      .then((xyz)=>{
-          console.log(xyz,'refreshed')
-          this.setState({post:xyz})
-          //console.log(post)
-          
+  componentDidMount(){
+    console.log('component did mount')
+    setInterval(() => {
+      fetch('http://localhost:9000/posts')
+      .then(res=>{
+        return res.json()
       })
-  }
+      .then((xyz)=>{
+        this.setState({post:xyz})
+      })
+    },100);
+  } 
+
   toggleDisplay = () => {
     this.setState({
       upload:true
@@ -35,7 +36,7 @@ class PostList extends React.Component{
     if(this.state.post && !this.state.upload)
     {
         pl = this.state.post.map((item)=>{
-            return <Post name={item.username} location={item.location} description={item.comment} image={item.image} date={item.date} likes={item.likes}></Post> 
+            return <Post name={item.username} location={item.location} description={item.comment} image={item.image} date={item.date} likes={item.likes} id={item._id}></Post> 
         })
     
      }

@@ -77,18 +77,19 @@
 	opacity: 1;
 }
 .post {
+	color: rgb(87, 73, 73);
 	top: 422px;
 	left: 910px;
 	width: 100px;
 	height: 32px;
 	background: #f0f0f0 0% 0% no-repeat padding-box;
-	border: 1px solid #707070;
+	border: 1px solid #747171;
 	border-radius: 5px;
 	opacity: 1;
 }
 .post:hover {
-	background-color: blue;
-	color: white;
+	background-color: rgb(73, 73, 255);
+	color: rgb(255, 255, 255);
 }
 .description4{
   border: 1px solid grey;

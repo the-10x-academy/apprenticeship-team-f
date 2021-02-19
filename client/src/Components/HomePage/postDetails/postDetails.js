@@ -2,11 +2,23 @@ import React from "react";
 import "./postDetails.css";
 import more_icon from "./icons/more_icon.svg";
 import likes_icon from "./icons/heart.png";
+// import red_heart from "./icons/red_heart.jfif";
 import share_icon from "./icons/share.png";
-import { PromiseProvider } from "mongoose";
+// import { PromiseProvider } from "mongoose";
 
 export default function postDetails(props) {
 	// const imagePath = "./../../../../../" + props.image ;  
+
+
+	const likesbutton= async (e)=>{
+        const data = new FormData();
+        data.append("id",props.id)
+        fetch('http://localhost:9000/posts/' + props.id, {
+            method: 'PUT',
+            body: data,
+        }).then(res => res.json())
+        .then((data)=>console.log(data));
+	}
 
 	return (
 		<div className="Page">
@@ -29,7 +41,7 @@ export default function postDetails(props) {
 				<div className="footSection">
 					<div className="likesShareDate">
 						<div className="likesShare">
-							<img className="likesIcon" alt="" src={likes_icon} />
+							<img className="likesIcon" alt="" src={likes_icon} onClick={likesbutton}/>
 							<img className="shareIcon" alt="" src={share_icon} />
 						</div>
 						<h6 className="date"> {props.date} </h6>  

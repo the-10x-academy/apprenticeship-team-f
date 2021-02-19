@@ -78,4 +78,19 @@ router.post("/posts", upload.single("image"), (req, res, next) => {
 
 });
 
+router.put('/posts/:id',upload.single("image"), (req, res,next) => { 
+    console.log(req.body)
+    console.log("put")
+    Post.findOneAndUpdate({_id: req.body.id },  
+        {$inc: { likes: 1 }}, null, function (err, docs) { 
+        if (err){ 
+            console.log(err) 
+        } 
+        else{ 
+            console.log('updated')
+            console.log("Original Doc : ",docs); 
+        } 
+    }); 
+})
+
 module.exports = router;
