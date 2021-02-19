@@ -1,4 +1,3 @@
-//import logo from "../../logo.svg";
 import React from "react";
 import "./HomePage.css";
 import { Link } from "react-router-dom";
@@ -23,3 +22,4 @@ function HomePage() {
 	);
 }
 export default HomePage;
+

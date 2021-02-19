@@ -15,11 +15,11 @@ function App() {
 
     return (
             <Router>
-                <switch>
+                <Switch>
                     <Route exact path="/" component={HomePage} />
                     <Route exact path="/insta" component={PostList} />
                     <Route exact path="/instaUpload" component={FileUpload} />
-                </switch>
+                </Switch>
                 
             </Router>
     );

@@ -28,31 +28,38 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage });
 
 router.get("/posts", function (req, res) {
-	Post.find()
-		.then((result) => {
-			res.status(200).json({
-				postData: result,
-			});
-			console.log(result);
-		})
-		.catch((err) => {
-			console.log(err);
-			res.status(500).json({ error: err });
-		});
+	console.log('requested')
+	Post.find({})
+  .sort({'_id':-1})
+  .exec(function(err,data){
+    if (err){
+      console.log(err)
+      res.json(500,{'message':'error'})
+	}
+	console.log(data,'found')
+    res.status(200).json(data);
+  })
 });
 
 router.post("/posts", upload.single("image"), (req, res, next) => {
 	// const fileinfo = req.file.filename;
 	// res.send(fileinfo);
+	console.log('hello')
 	const imagePath = req.file.path;
 
-	console.log(req);
+	let date = new Date()
+	date = date.toString()
+	date = date.split(' ')
+	let currDate = date[2]+' '+date[1]+' '+date[3]
+
+	console.log("currDate is ", currDate);
 	var ale = {
 		given_name: req.body.username, //// to compare with schema
 		given_location: req.body.location,
 		given_comment: req.body.comment, ////newly added
-		given_likes: req.body.likes, ////newly added
+		given_likes: 0, ////newly added
 		given_image: imagePath,
+		given_date: currDate
 	};
 	console.log(ale, req.body);
 	const author = new Post({
@@ -61,6 +68,7 @@ router.post("/posts", upload.single("image"), (req, res, next) => {
 		comment: ale.given_comment, ////newly added
 		likes: ale.given_likes, ///newly added
 		image: ale.given_image,
+		date: ale.given_date
 	});
 	author.save((err, doc) => {
 		if (err) console.log(err);
@@ -69,5 +77,20 @@ router.post("/posts", upload.single("image"), (req, res, next) => {
 	res.redirect("/posts");
 
 });
+
+router.put('/posts/:id',upload.single("image"), (req, res,next) => { 
+    console.log(req.body)
+    console.log("put")
+    Post.findOneAndUpdate({_id: req.body.id },  
+        {$inc: { likes: 1 }}, null, function (err, docs) { 
+        if (err){ 
+            console.log(err) 
+        } 
+        else{ 
+            console.log('updated')
+            console.log("Original Doc : ",docs); 
+        } 
+    }); 
+})
 
 module.exports = router;
