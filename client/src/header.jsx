@@ -2,7 +2,7 @@ import React from "react";
 import "./header.css";
 import img1 from "./Image/icon.png";
 import img2 from "./Image/camera.png";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const Header = (props) => (
 	<div className="header">
@@ -26,4 +26,4 @@ const Header = (props) => (
 		{/* </Link> */}
 	</div>
 );
-export default Header;
+export default Header; 

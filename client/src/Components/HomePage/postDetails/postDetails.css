@@ -38,10 +38,29 @@
 	color: #707070;
 	/* font-family: Verdana; */
 }
+
+.threedotAndDelete{
+	/* position: fixed; */
+	width:25px;
+	height:25px;
+	/* z-index: 1; */
+}
+
 .moreIcon {
+	/* position:absolute; */
 	width: 20px;
 	height: 5px;
 }
+
+.deletePost{
+	position: relative;
+	color:black;
+	background-color: silver;
+	margin-top: 0px;
+	left: 20px;
+	/* z-index: 1; */
+}
+
 .avatar {
 	top: 300px;
 	left: 600px;
@@ -78,6 +97,9 @@
 	height: 30px;
 	margin-right: 22px;
 }
+/* .likesIcon:hover{
+	background-color: red;
+} */
 .shareIcon {
 	width: 30px;
 	height: 30px;
@@ -102,3 +124,6 @@
 	color: #000000;
 	opacity: 1;
 }
+
+
+  

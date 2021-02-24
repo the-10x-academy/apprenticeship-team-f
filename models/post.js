@@ -31,6 +31,4 @@ const postSchema = new mongoose.Schema({
 	},
 });
 
-//collection creation
-// const Post = new mongoose.model("Post",postSchema);
 module.exports = mongoose.model("Post", postSchema);

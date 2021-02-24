@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const mongoose = require("mongoose"); // new included
-const mongo = require("../mongo"); // new included
-const Post = require("../Models/post"); // new included schema
+const mongoose = require("mongoose"); 
+const mongo = require("../mongo"); 
+const Post = require("../Models/post"); 
 
 const multer = require("multer");
 const fs = require("fs");
@@ -14,7 +14,7 @@ router.get("/", function (req, res, next) {
 	res.render("index", { title: "Express" });
 });
 
-/*edited*/
+
 var storage = multer.diskStorage({
 	destination: function (req, file, cb) {
 		cb(null, "./uploads");
@@ -30,8 +30,8 @@ var upload = multer({ storage: storage });
 router.get("/posts", function (req, res) {
 	console.log('requested')
 	Post.find({})
-  .sort({'_id':-1})
-  .exec(function(err,data){
+    .sort({'_id':-1})
+    .exec(function(err,data){
     if (err){
       console.log(err)
       res.json(500,{'message':'error'})
@@ -41,9 +41,18 @@ router.get("/posts", function (req, res) {
   })
 });
 
+
+router.post("/posts/delete/:id", function(req, res, next) {
+	console.log("post getting deleted")
+	Post.findByIdAndDelete({ _id: req.params.id }, function(err, res) {
+		if(err){console.log(err)}
+		else{console.log(res)}
+	})
+	Post.find({})
+	.sort({'_id':-1})
+})  
+
 router.post("/posts", upload.single("image"), (req, res, next) => {
-	// const fileinfo = req.file.filename;
-	// res.send(fileinfo);
 	console.log('hello')
 	const imagePath = req.file.path;
 
@@ -54,19 +63,19 @@ router.post("/posts", upload.single("image"), (req, res, next) => {
 
 	console.log("currDate is ", currDate);
 	var ale = {
-		given_name: req.body.username, //// to compare with schema
+		given_name: req.body.username, 
 		given_location: req.body.location,
-		given_comment: req.body.comment, ////newly added
-		given_likes: 0, ////newly added
+		given_comment: req.body.comment, 
+		given_likes: 0, 
 		given_image: imagePath,
 		given_date: currDate
 	};
 	console.log(ale, req.body);
 	const author = new Post({
-		username: ale.given_name, /// to assaign the valid input
+		username: ale.given_name, 
 		location: ale.given_location,
-		comment: ale.given_comment, ////newly added
-		likes: ale.given_likes, ///newly added
+		comment: ale.given_comment, 
+		likes: ale.given_likes, 
 		image: ale.given_image,
 		date: ale.given_date
 	});
@@ -92,5 +101,6 @@ router.put('/posts/:id',upload.single("image"), (req, res,next) => {
         } 
     }); 
 })
+
 
 module.exports = router;

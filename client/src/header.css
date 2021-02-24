@@ -10,7 +10,7 @@
     
     background-color: white;
     padding: 15px;
-    border-bottom: 1.3px solid #006238; /*colour */
+    border-bottom: 1.3px solid #006238; 
     display:flex;
     justify-content: left;
     align-items: center;
@@ -20,7 +20,7 @@
 
 .Iicon {
     top: 25px;
-    left: 200px;
+    left: 228px;
     width: 64px;
     height: 64px;
     margin-left: 200px;
@@ -50,6 +50,7 @@
     align-items: center;
     
     margin-left: 85%;
+    /* left: 3672px; */
     width: 48px;
     height: 48px;
     opacity: 1;

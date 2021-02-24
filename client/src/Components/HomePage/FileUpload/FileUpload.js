@@ -1,7 +1,5 @@
 import React from "react";
 import "./FileUpload.css";
-// import Header from "../../../header";
-// import { Link } from "react-router-dom";
 
 class FileUpload extends React.Component {
 	constructor(props) {
@@ -19,10 +17,6 @@ class FileUpload extends React.Component {
 		this.fileInput = React.createRef();
 	}
 	checkFilled = () => {
-		console.log(this.state.description, "1");
-		console.log(this.state.location, "2");
-		console.log(this.state.author, "3");
-		console.log(this.state.fileName, "4");
 		if (
 			this.state.description &&
 			this.state.location &&
@@ -49,7 +43,6 @@ class FileUpload extends React.Component {
 	}
 	handleSubmit(event) {
 		var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif|\.jfif)$/;
-		console.log("test console");
 		if (allowedExtensions.exec(this.fileInput.current.files[0].name)) {
 			console.log("in the clicked");
 			const formData = new FormData();
@@ -78,7 +71,7 @@ class FileUpload extends React.Component {
 	}
 	render() {
 		this.checkFilled();
-		console.log(this.state.allFilled);
+		// console.log(this.state.allFilled);
 		return (
 			<div className="box">
 				<form onSubmit={this.handleSubmit}>
@@ -134,7 +127,6 @@ class FileUpload extends React.Component {
 							onChange={this.handleChange.bind(this)}
 						/>
 					</div>
-					{/* <Link to='/insta' > */}
 					<div className="line line4">
 						<input
 							type="submit"
@@ -146,7 +138,6 @@ class FileUpload extends React.Component {
 								!this.state.description ||
 								!this.state.fileName
 							}
-							// onClick={this.handleSubmit}
 							style={
 								this.state.allFilled
 									? { backgroundColor: "#1833db", color: "white" }
@@ -154,7 +145,6 @@ class FileUpload extends React.Component {
 							}
 						/>
 					</div>
-					{/* </Link> */}
 				</form>
 			</div>
 		);

@@ -2,9 +2,7 @@ import React from "react";
 import {
 	BrowserRouter as Router,
 	Route,
-	Link,
 	Switch,
-	Redirect,
 } from "react-router-dom";
 
 import HomePage from "./Components/HomePage/HomePage";
