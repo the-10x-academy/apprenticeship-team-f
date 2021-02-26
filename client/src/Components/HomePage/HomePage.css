@@ -27,7 +27,7 @@
 }
 /* Right section(heading & button section ) */
 .rightSectionContent {
-	height: 95vh;
+	height: auto;
 	width: 33.33vw;
 	display: flex;
 	vertical-align: middle;

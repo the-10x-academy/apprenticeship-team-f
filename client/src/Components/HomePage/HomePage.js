@@ -10,10 +10,10 @@ function HomePage() {
 				<div className="rightSection">
 					<div className="rightSectionContent">
 						<center>
-							<h1 className="teamHeading">10x Team 06</h1>
-							<Link to="/insta" style={{ textDecoration: "none" }}>
-								<button className="enter-btn"> Enter </button>
-							</Link>
+						<h1 className="teamHeading">10x Team 06</h1>
+						<Link to="/insta" style={{ textDecoration: "none" }}>
+							<button className="enter-btn"> Enter </button>
+						</Link>
 						</center>
 					</div>
 				</div>
@@ -22,4 +22,3 @@ function HomePage() {
 	);
 }
 export default HomePage;
-

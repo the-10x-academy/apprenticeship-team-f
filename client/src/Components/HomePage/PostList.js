@@ -22,7 +22,7 @@ class PostList extends React.Component{
       .then((xyz)=>{
         this.setState({post:xyz})
       })
-    },100);
+    },500);
   } 
 
   toggleDisplay = () => {
@@ -31,7 +31,7 @@ class PostList extends React.Component{
     })
   }
   render(){
-    console.log(this.state.post,'in render')
+    // console.log(this.state.post,'in render')
     let pl=null;
     if(this.state.post && !this.state.upload)
     {
